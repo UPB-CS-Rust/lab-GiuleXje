@@ -1,3 +1,13 @@
+fn append_to_string(s: String) -> String {
+    let mut s = s;
+
+    s.push_str("Hello");
+    s.push_str(" ");
+    s.push_str("World");
+
+    s
+}
+
 fn main() {
     let s0 = String::new();
 
@@ -10,12 +20,3 @@ fn main() {
     println!("{} == `{}`", stringify!(s1), s1);
 }
 
-fn append_to_string(s: String) -> String {
-    let mut s = s;
-
-    s.push_str("Hello");
-    s.push_str(" ");
-    s.push_str("World");
-
-    s
-}

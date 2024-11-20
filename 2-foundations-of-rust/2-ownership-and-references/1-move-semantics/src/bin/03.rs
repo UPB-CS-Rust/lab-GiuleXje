@@ -3,7 +3,7 @@
 fn main() {
     let s0 = String::new();
 
-    let mut s1 = append_to_string(s0);
+    let mut s1 = append_to_string(s0.clone());
 
     println!("{} == `{}`", stringify!(s1), s1);
 
@@ -12,7 +12,7 @@ fn main() {
     println!("{} == `{}`", stringify!(s1), s1);
 }
 
-fn append_to_string(s: String) -> String {
+fn append_to_string(mut s: String) -> String {
     s.push_str("Hello World");
 
     s
